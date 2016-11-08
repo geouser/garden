@@ -75,6 +75,22 @@ jQuery(document).ready(function($) {
         mainClass: 'my-mfp-slide-bottom'
     });
 
+    $('.magnific-image').magnificPopup({
+        type: 'image',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+        modal: false,
+
+        closeBtnInside: true,
+        preloader: false,
+        
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'mfp-zoom-in'
+    });
 
 
     /*----------------------------
