@@ -4,13 +4,55 @@
 html,
 body {
 	height: 100%;
+    font-family: $dseb;
+    font-size: 21px;
 }
-
+body {
+    padding-top: 140px;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $g;
+    font-weight: normal;
+} 
+h1 {
+    font-size: 71px;
+}
+h2 {
+    font-size: 72px;
+    margin-bottom: 90px;
+}
 
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1200px;
+	width: 1080px;
 	margin: 0 auto;
 	text-align: center;
+    &--wide {
+        width: 100%;
+        padding: 0 100px;
+    }
+}
+section {
+    padding: 80px 0;
+}
+.imgBg {
+    @include flex($direction: column, $justify: center, $alignI: center);
+    min-height: 450px;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    p {
+        color: #FFF;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    h2 {
+        color: #FFF;
+    }
 }

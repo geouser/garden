@@ -1,0 +1,29 @@
+.advantagesList {
+    @include flex($alignI: flex-start);
+    > div {
+        width: 33.333%;
+        padding: 0 70px;
+        text-align: center;
+    }
+    &__img {
+        display: block;
+        margin: 0 auto 45px;
+        width: 130px;
+        height: 130px;
+        border: 2px solid $green;
+        text-align: center;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            content: "";
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 80%;
+        }
+    }
+}

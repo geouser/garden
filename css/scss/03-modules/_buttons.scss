@@ -1,0 +1,31 @@
+.button {
+    height: 40px;
+    width: 180px;
+    font: 14px $dsab;
+    color: #FFF;
+    border: 2px solid #fff;
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+    &:hover {
+        background-color: #FFF;
+        color: $grey;
+    }
+    &--green {
+        background-color: $green;
+        border: 2px solid transparent;
+        &:hover {
+            background-color: $grey;
+            color: #FFF;
+        }
+    }
+}
+a.button {
+    line-height: 40px;
+}

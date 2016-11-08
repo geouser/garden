@@ -1,3 +1,40 @@
 .offer {
-    height: 800px;
+    height: 100%;
+    min-height: 500px;
+    max-height: 850px;
+    background-position: 50% 50%;
+    padding: 0;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    @include flex($direction: column, $justify: center);
+    h1 {
+        color: #FFF;
+        margin-bottom: 35px;
+    }
+    p {
+        color: #FFF;
+        width: 800px;
+        max-width: 90%;
+        display: block;
+        margin: 0 auto 40px;
+    }
+    .button {
+        margin: 0 10px;
+    }
+}
+.scroll {
+    position: absolute;
+    bottom: 50px;
+    left: 0; right: 0;
+    margin: auto;
+    width: 130px;
+    text-align: center;
+    font-size: 14px;
+    font-family: $dsa;
+    color: #FFF;
+    img {
+        display: block;
+        margin: 10px auto 0;
+    }
 }

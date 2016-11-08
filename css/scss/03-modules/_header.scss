@@ -1,57 +1,162 @@
          
 .mainHeader {
-    @include position(absolute, 0, auto, auto, 0);
-    width: 100%;
-    z-index: 100;
-    background: #fff;
-    margin: 0;
-    @include transition(all, .4s);
-    
-        /*.................media.............*/
-        @include m800 {
-            @include position(fixed, 0, auto, auto, -100%);
-            width: 260px !important;
-            height: 100%;
-            text-align: center;
-            background-color: #fff;
-            margin-top: 0;
-            padding: 20px 0;
-            z-index: 100;
-            overflow: scroll;
-             
-            &.active { left: 0;}
-            .wrapper {
-                display: block;
+    @include position(absolute, 0, 0, 0, 0);
+    height: 140px;
+    .wrapper {
+        @include flex();
+        height: 100%;
+    }
+    &__top {
+        height: 35px;
+        background-color: $green;
+        color: #FFF;
+        &:hover {
+            color: $grey;
+        }
+        .wrapper {
+            > div {
+                width: 50%;
+                text-align: left;
+                margin-top: -2px;
+                &:nth-of-type(2) {
+                    text-align: right;
+                }
+            }
+            .tel,
+            .mail {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 95px;  
+                color: #FFF;
+                font: 14px $dsab;
+                &:before {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                    background-image: url("../images/tel.png");
+                    content: "";
+                }
+            }
+            .tel {
+                &:before {
+                    width: 16px;
+                    height: 16px;
+                    background-position: 0 0;
+                }
+                &:hover {
+                    color: $grey;
+                    &:before {
+                        background-position: 0 -20px;
+                    }
+                }
+            }
+            .mail {
+                &:before {
+                    width: 17px;
+                    height: 12px;
+                    background-position:-25px 0;
+                }
+                &:hover {
+                    color: $grey;
+                    &:before {
+                        background-position: -25px -15px;
+                    }
+                }
             }
         }
-        /*.............end media..............*/
+    }
+    &__bottom {
+        height: 105px;
+        background-color: #FFF;
+        .wrapper {
+            padding: 0 50px;
+        }
+    }
+    .social {
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
+.social {
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 24px 0 0;
+        background-repeat: no-repeat;
+        background-image: url("../images/social.png");
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &--fb {
+            height: 16px;
+            width: 10px;
+            background-position: 0 0;
+            &:hover {
+                background-position: 0 -17px;
+            }
+        }
+        &--tw {
+            width: 16px;
+            height: 16px;
+            background-position: -36px 0;
+            &:hover {
+                background-position: -36px -18px;
+            }
+        }
+        &--inst {
+            width: 16px;
+            height: 16px;
+            background-position: -76px 0;
+            &:hover {
+                background-position: -76px -17px;
+            }
+        }
+    }
+    &--dark {
+        .social__item--fb {
+            background-position: 0 -36px;
+            &:hover {
+                background-position: 0 -17px;
+            }
+        }
+        .social__item--tw {
+            background-position: -36px -36px;
+            &:hover {
+                background-position: -36px -18px;
+            }
+        }
+        .social__item--inst {
+            background-position: -76px -36px;
+            &:hover {
+                background-position: -76px -17px;
+            }
+        }
+    }
+}
 
 /* ------------------------------------ */
 /*  NAV STYLES  */
 .mainNav {
     ul {
         list-style-type: none;
-        a {
+        li {
             display: inline-block;
-            margin: 0 20px;
-            text-decoration: none;
-            @include transition(all, .2s);             
-            &:hover {}
-        }
-
-            /*.................media.............*/
-            @include m800 { 
-                display: block;
-                position: relative;
-                li a  {   
-                    margin: 0 0 25px 0;
-                    &.active {color: #ECCC1D;}
-                    &:hover  {background: transparent;}
-                } 
+            vertical-align: middle;
+            margin-right: 48px;
+            &:last-of-type {
+                margin-right: 0;
             }
-            /*.............end media.............*/
+            a {
+                font: 18px $dsa;
+                color: #000;
+                display: inline-block;
+                &.active,
+                &:hover {
+                    color: $grey;
+                }
+            }
+        }
     }
 }
 
@@ -99,4 +204,52 @@
         }
         /*..............end media.............*/
 
+}
+
+
+.searchInput {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  margin-left: 110px;
+}
+@media (max-width: 500px) {
+  .searchInput {
+    display: block;
+    margin: 20px auto 40px;
+    width: 200px;
+  }
+}
+.searchInput input {
+  background-color: transparent;
+}
+.searchInput .search_type {
+  border: none;
+  position: absolute;
+  left: 26px;
+  top: 0;
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  color: $grey;
+  font: 14px $dsab;
+}
+.searchInput #search_submit {
+  display: block;
+  border: none;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-image: url("../images/glass.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+       -o-background-size: 100% 100%;
+          background-size: 100% 100%;
+  padding: 0;
+}
+.searchInput:hover #search_submit,
+.searchInput:focus #search_submit,
+.searchInput.active #search_submit {
+    background-image: url("../images/glass_d.svg");
 }

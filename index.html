@@ -25,30 +25,43 @@
         <!--=================================================================================================-->
                                                     <!-- HEADER -->
         <header class="mainHeader">
-            <div class="wrapper">
-
-                <nav class="mainNav"><!-- start navigation -->
-                    <ul>
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Practive</a></li>
-                        <li><a href="#">Lawyers</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav><!-- end nav -->
-
-                <div class="mainHeader__info">
-                    <div class="social">
-                        <a href="" class="social__item"></a>
-                        <a href="" class="social__item"></a>
-                        <a href="" class="social__item"></a>
+            <div class="mainHeader__top">
+                <div class="wrapper">
+                    <div>
+                        <a href="tel:+971 55 915 94 49" class="tel">+971 55 915 94 49</a>
+                        <a href="mailto:hello@law.com" class="mail">hello@law.com</a>
                     </div>
-                    <a href="tel:+971 55 915 94 49" class="tel">+971 55 915 94 49</a>
-                    <a href="mailto:hello@law.com" class="mail">hello@law.com</a>
-                </div><!-- end mainHeader__info -->
+                    <div>
+                        <div class="social">
+                            <a href="" class="social__item social__item--fb"></a>
+                            <a href="" class="social__item social__item--tw"></a>
+                            <a href="" class="social__item social__item--inst"></a>
+                        </div>
+                        <form class="searchInput" tabindex=0 method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                            <div class="wrap">
+                                <input type="search" class="search_type field" name="s" id="s"  />
+                                <input type="submit" id="search_submit" class="sim" name="submit"  value="" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-            </div><!-- end wrapper -->
+            <div class="mainHeader__bottom">
+                <div class="wrapper">
+                    <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
+                    <nav class="mainNav"><!-- start navigation -->
+                        <ul>
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">What we do</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Partnership</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav><!-- end nav -->
+                </div><!-- end wrapper -->
+            </div>
         </header><!-- end header -->
         
         <button class="menu-button"> 
@@ -60,12 +73,131 @@
 
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
-        <section class="offer">
-            <div class="offer__info wrapper"><!-- start offerInfo -->
-                <h1>Free advice from our</h1>
-                <button class="button">Request a free consultation</button>
+        <section class="offer" style="background-image: url('images/offer-main.jpg')">
+            <div class="wrapper"><!-- start offerInfo -->
+                <h1>Maintenance</h1>
+                <p>Our all-inclusive services provide you with a dedicated and trained gardener to manage all  watering, pruning, fertilizing and treatment needs</p>
+                <button class="button button--green">Make a request</button> 
+                <button class="button">Learn More</button>
             </div><!-- end offerInfo -->
+            <div class="scroll">
+                Scroll to discover
+                <img src="images/scroll.png" alt="">
+            </div>
         </section><!-- end offer section --> 
+
+        <section>
+            <div class="wrapper">
+                <h2>Our advantages</h2>
+                <div class="advantagesList">
+                    <div>
+                        <i class="advantagesList__img">
+                            <img src="images/adv_1.png" alt="">
+                        </i> 
+                        <span>We are engaged in favorite business</span>
+                    </div>
+                    <div>
+                        <i class="advantagesList__img">
+                            <img src="images/adv_2.png" alt="">
+                        </i> 
+                        <span>Create a piece of nature in your home</span>
+                    </div>
+                    <div>
+                        <i class="advantagesList__img">
+                            <img src="images/adv_3.png" alt="">
+                        </i> 
+                        <span>We care and take care of your garden</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="imgBg" style="background-image: url('images/imgBgMain.jpg')">
+            <div class="wrapper">
+                <p>Lorem ipsum dolor sit amet, te quo legimus facilisis patrioque. 
+                Paulo percipit te sea, usu in omnis instructior, eam utinam oportere an. 
+                Vel te suscipit scriptorem, qui nobis dicunt petentium eu.
+                 In nostrum adversarium mea. Et quot pericula pro, cum scripta maluisset at.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper wrapper--wide">
+                <h2>Our Portfolio</h2>
+                <div class="works">
+                    <div class="works__example" style="background-image: url('images/work-1.jpg')">
+                        <div class="works__example__info">
+                            <span>A villa in Um Suqueim</span>
+                            <a href="" class="button">Learn more</a>
+                        </div>
+                    </div>
+                     <div class="works__example" style="background-image: url('images/work-1.jpg')">
+                        <div class="works__example__info">
+                            <span>A villa in Um Suqueim</span>
+                            <a href="" class="button">Learn more</a>
+                        </div>
+                    </div>
+                     <div class="works__example" style="background-image: url('images/work-1.jpg')">
+                        <div class="works__example__info">
+                            <span>A villa in Um Suqueim</span>
+                            <a href="" class="button">Learn more</a>
+                        </div>
+                    </div>
+                     <div class="works__example" style="background-image: url('images/work-1.jpg')">
+                        <div class="works__example__info">
+                            <span>A villa in Um Suqueim</span>
+                            <a href="" class="button">Learn more</a>
+                        </div>
+                    </div>
+                     <div class="works__example" style="background-image: url('images/work-1.jpg')">
+                        <div class="works__example__info">
+                            <span>A villa in Um Suqueim</span>
+                            <a href="" class="button">Learn more</a>
+                        </div>
+                    </div>
+                     <div class="works__example" style="background-image: url('images/work-1.jpg')">
+                        <div class="works__example__info">
+                            <span>A villa in Um Suqueim</span>
+                            <a href="" class="button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="imgBg" style="background-image: url('images/imgBgMain-2.jpg')">
+            <div class="wrapper">
+                <h2>High-quality maintenance</h2>
+                <p>Our all-inclusive services provide you with a dedicated and trained gardener to manage all  watering, pruning, fertilizing and treatment needs</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="wrapper">
+                <nav class="footerNav"><!-- start navigation -->
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">What we do</a></li>
+                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav><!-- end nav -->
+            </div>
+            <div class="footer__bottom">
+                <div class="wrapper">
+                    <span class="copy">2016 © Copyright The Garden Studio</span>
+                    <div class="social social--dark">
+                        <a href="" class="social__item social__item--fb"></a>
+                        <a href="" class="social__item social__item--tw"></a>
+                        <a href="" class="social__item social__item--inst"></a>
+                    </div>
+                    <span class="powered">Powered by Ultra Web Dubai</span>
+                </div>
+            </div>
+        </footer>
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->

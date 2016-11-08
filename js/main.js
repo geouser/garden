@@ -22,6 +22,17 @@ jQuery(document).ready(function($) {
         });
     });
       
+    $(".search_type").focus(function(){
+       $('.searchInput').addClass("active");
+      }).blur(function(){
+           $('.searchInput').removeClass("active");
+           $(this).val('');
+    });
+
+    $('.searchInput').mouseenter(function(){
+        $(".search_type").focus();
+    });
+
 
     /*---------------------------
                                   MENU TOGGLE

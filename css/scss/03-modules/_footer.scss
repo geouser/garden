@@ -1,0 +1,38 @@
+.footer {
+    padding: 40px 0 45px;
+    &__bottom {
+        .wrapper {
+            @include flex();
+        }
+    }
+}
+.footerNav {
+    ul {
+        list-style-type: none;
+        display: block;
+        margin: 0 auto 35px;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 48px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            a {
+                font: 18px $dsa;
+                color: #000;
+                display: inline-block;
+                &.active,
+                &:hover {
+                    color: $grey;
+                }
+            }
+        }
+    }
+}
+
+.copy,
+.powered {
+    font: 18px $dsa;
+    width: 300px;
+}
