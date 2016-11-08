@@ -1,8 +1,14 @@
 .footer {
     padding: 40px 0 45px;
+    @media (max-width: 800px) {
+        padding: 20px 0;
+    }
     &__bottom {
         .wrapper {
             @include flex();
+            @media (max-width: 800px) {
+                display: block;
+            }
         }
     }
     &--dark {
@@ -12,6 +18,10 @@
                 li {
                     a {
                         color: #FFF;
+                        &.active,
+                        &:hover {
+                            color: #FFF;
+                        }
                     }
                 }
             }
@@ -49,12 +59,21 @@
         list-style-type: none;
         display: block;
         margin: 0 auto 35px;
+        @media (max-width: 800px) {
+            margin-bottom: 10px;
+        }
         li {
             display: inline-block;
             vertical-align: middle;
             margin-right: 48px;
             &:last-of-type {
                 margin-right: 0;
+            }
+            @media (max-width: 1000px) {
+                margin: 0 10px 20px;
+                &:last-of-type {
+                    margin: 0 10px 20px;
+                }
             }
             a {
                 font: 18px $dsa;
@@ -76,5 +95,11 @@
     color: $grey;
     a {
         color: $grey;
+    }
+    @media (max-width: 800px) {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 16px; max-width: 100%;
     }
 }

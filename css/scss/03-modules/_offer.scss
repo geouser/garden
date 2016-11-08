@@ -19,6 +19,10 @@
     }
     .button {
         margin: 0 10px;
+        @media (max-width: 500px) {
+            display: block;
+            margin: 10px auto;
+        }
     }
 }
 .scroll {
@@ -34,6 +38,12 @@
     img {
         display: block;
         margin: 10px auto 0;
+    }
+    @media (max-width: 1600px) {
+        bottom: 30px;
+    }
+    @media (max-width: 1200px) {
+        bottom: 20px;
     }
 }
 

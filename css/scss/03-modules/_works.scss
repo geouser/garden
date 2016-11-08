@@ -8,6 +8,12 @@
              -o-background-size: cover;
                 background-size: cover;
         margin-bottom: 1.5%;
+        @media (max-width: 750px) {
+            width: 49.2%;
+        }
+        @media (max-width: 500px) {
+            width: 100%;
+        }
         &__info {
             position: absolute;
             left: 0;
@@ -28,6 +34,12 @@
                 display: block;
                 margin-bottom: 50px;
                 color: #FFF;
+                @media (max-width: 900px) {
+                    margin-bottom: 30px;
+                }
+                @media (max-width: 800px) {
+                    margin-bottom: 20px;
+                }
             }
         }
         &:after {
@@ -47,6 +59,18 @@
             margin: 0;
             &:after {
               padding-bottom: 76%;
+            }
+            @media (max-width: 1200px) {
+                width: 25%;
+            }
+            @media (max-width: 900px) {
+                width: 33.333%;
+            }
+            @media (max-width: 600px) {
+                width: 50%;
+            }
+            @media (max-width: 500px) {
+                width: 100%;
             }
         }
     }
@@ -71,6 +95,9 @@
         &:hover,
         &.active {
             background-color: $greenD;
+        }
+        @media (max-width: 700px) {
+            margin: 10px;
         }
     }
 }

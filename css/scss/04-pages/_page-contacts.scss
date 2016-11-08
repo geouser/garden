@@ -1,8 +1,15 @@
 .contacts {
     @include flex();
+    @media (max-width: 700px) {
+        display: flex;
+    }
     > div {
         width: 50%;
         text-align: left;
+        @media (max-width: 700px) {
+            text-align: center;
+            width: 100%;
+        }
     }
     .title {
         color: $green;
@@ -16,21 +23,39 @@
     }
     &__info {
         padding-right: 20%;
+        @media (max-width: 900px) {
+            padding-right: 20px;
+        }
+        @media (max-width: 700px) {
+            margin-bottom: 40px;
+        }
         &__item {
             margin-bottom: 40px;
+            @media (max-width: 900px) {
+                margin-bottom: 20px;
+            }
         }
     }
 }
 
 .form {
+    @media (max-width: 900px) {
+        text-align: left;
+    }
     .title {
         margin-bottom: 40px;
+        @media (max-width: 900px) {
+            margin-bottom: 20px;
+        }
     }
     label {
         display: block;
         margin-bottom: 24px;
         color: #282826;
         font: 18px $dsa;
+        @media (max-width: 900px) {
+            margin-bottom: 10px;
+        }
     }
     input {
         height: 60px;
@@ -38,8 +63,18 @@
         padding-left: 10px;
         width: 100%;
         border: 2px solid #282826;
+        font: 18px $dsa;
+        color: #282826;
         -webkit-border-radius: 6px;
                 border-radius: 6px;
+        &:focus,
+        &:hover {
+            border-color: $green;
+        }
+        @media (max-width: 900px) {
+            height: 50px;
+            margin-bottom: 20px;
+        }
     }
     textarea {
         margin-bottom: 40px;
@@ -48,13 +83,25 @@
         resize: none;
         height: 110px;
         border: 2px solid #282826;
+        font: 18px $dsa;
+        color: #282826;
         -webkit-border-radius: 6px;
                 border-radius: 6px;
+        &:focus,
+        &:hover {
+            border-color: $green;
+        }
+        @media (max-width: 900px) {
+            margin-bottom: 20px;
+        }
     }
     .inputGroup {
         @include flex();
         div {
             width: 48%;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
         }
     }
     .button {
@@ -66,4 +113,10 @@
 .map-canvas {
     height: 450px;
     margin-top: 95px;
+    @media (max-height: 600px) {
+        height: 350px;
+    }
+    @media (max-height: 500px) {
+        height: 300px;
+    }
 }

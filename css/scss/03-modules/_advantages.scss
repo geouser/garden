@@ -1,9 +1,23 @@
 .advantagesList {
     @include flex($alignI: flex-start);
+    @media (max-width: 500px) {
+        display: block;
+    }
     > div {
         width: 33.333%;
-        padding: 0 70px;
+        padding: 0 6%;
         text-align: center;
+        @media (max-width: 700px) {
+            padding: 0 10px;
+        }
+        @media (max-width: 500px) {
+            width: 260px;
+            display: block;
+            margin: 0 auto 40px;
+            span {
+                font-size: 16px;
+            }
+        }
     }
     &__img {
         display: block;
@@ -14,6 +28,9 @@
         text-align: center;
         -webkit-border-radius: 50%;
                 border-radius: 50%;
+        @media (max-width: 500px) {
+            margin-bottom: 20px;
+        }
         &:before {
             display: inline-block;
             vertical-align: middle;

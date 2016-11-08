@@ -2,22 +2,35 @@
     width: 100%;
     position: relative;
     margin-bottom: 80px;
+    @media (max-width: 800px) {
+        margin-bottom: 60px;
+    }
     .ver {
         position: absolute;
         left: 0;
         bottom: 0;
         width: 32%;
+        @include m800 {
+            display: none;
+        }
     }
     .hor {
         position: absolute;
         right: 0;
         bottom: 0;
         width: 63%;
+        @include m800 {
+            width: 100%;
+            position: static;
+        }
     }
     &:after {
       content: "";
       display: block;
       padding-bottom: 53%;
+      @include m800 {
+          display: none;
+      }
     }
     &__info {
         position: absolute;
@@ -28,11 +41,31 @@
         @include m1600 {
             width: 55%;
             right: 4%;
+            top: 10%;
+        }
+        @media (max-width: 1200px) {
+            top: 6%;
+            right: 2%;
+            width: 57%;
+        }
+         @media (max-width: 1000px) {
+            right: 0;
+            width: 60%;
+        }
+        @include m800 {
+            width: 100%;
+            position: static;
         }
         p {
             margin-bottom: 30px;
             @include m1600 {
                 font-size: 17px;
+            }
+            @media (max-width: 1200px) {
+                font-size: 16px;
+            }
+            @media (max-width: 1000px) {
+                font-size: 14px;
             }
         }
     }

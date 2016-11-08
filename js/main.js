@@ -47,9 +47,9 @@ jQuery(document).ready(function($) {
         $(this).toggleClass('active');
         $(this).siblings('header').toggleClass('active');
         if ($('header').hasClass('active')) {
-                $('body, html').css('overflow', 'hidden');
+                $('body').css('overflow', 'hidden');
             } else {
-                $('body, html').css('overflow', 'visible');
+                $('body').css('overflow', 'visible');
             }
     });
 
