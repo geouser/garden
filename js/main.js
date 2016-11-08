@@ -33,6 +33,11 @@ jQuery(document).ready(function($) {
         $(".search_type").focus();
     });
 
+    $(function(){
+        if ($('#works').length > 0) {
+            $('#works').mixItUp();
+        }
+    });
 
     /*---------------------------
                                   MENU TOGGLE
