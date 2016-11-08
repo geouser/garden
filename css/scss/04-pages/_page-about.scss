@@ -1,0 +1,56 @@
+.aboutItem {
+    width: 100%;
+    position: relative;
+    margin-bottom: 80px;
+    .ver {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 32%;
+    }
+    .hor {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 63%;
+    }
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 53%;
+    }
+    &__info {
+        position: absolute;
+        top: 13%;
+        width: 50%;
+        right: 6%;
+        text-align: left;
+        @include m1600 {
+            width: 55%;
+            right: 4%;
+        }
+        p {
+            margin-bottom: 30px;
+            @include m1600 {
+                font-size: 17px;
+            }
+        }
+    }
+    &:nth-of-type(2n) {
+        .ver {
+            left: auto;
+            right: 0;
+        }
+        .hor {
+            right: auto;
+            left: 0;
+        }
+        .aboutItem__info {
+            right: auto;
+            left: 6%;
+            @include m1600 {
+                left: 4%;
+            }
+        }
+    }
+}

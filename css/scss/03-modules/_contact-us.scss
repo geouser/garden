@@ -1,0 +1,95 @@
+.contact-us {
+    background-image: url(../images/contact-us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 100px 0;
+
+    @media (max-width: 700px) {
+        padding: 50px 0;
+    }
+
+    .title {
+        font-size: 72px;
+        color: #fff;
+        font-family: $g;
+        margin-bottom: 80px;
+
+        @media (max-width: 700px) {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .options-box {
+        @include flex($alignI: flex-start, $justify: center);
+
+        div {
+            width: 33.3333%;
+            
+            a {
+                display: inline-block;
+                height: 90px;
+                width: 200px;
+
+                @media (max-width: 700px) {
+                    width: 100%;
+                }
+
+                span {
+                    font-size: 30px;
+                    font-family: $dsa;
+                    color: #fff;
+                    transition: all 0.3s ease;
+
+                    @media (max-width: 700px) {
+                        font-size: 20px;
+                    }
+
+                    @media (max-width: 450px) {
+                        font-size: 14px;
+                    }
+                }
+
+                i {
+                    height: 40px;
+                    margin: 0 auto 9px;
+                    display: block;
+                    vertical-align: middle;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: 50% 50%;
+                    -webkit-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover {
+                    span {
+                        font-size: 0;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                    i {
+                        width: 66px;
+                        height: 66px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+i.phone {
+    width: 36px;
+    background-image: url(../images/call.svg);
+}
+i.chat {
+    width: 34px;
+    background-image: url(../images/chat.svg);
+}
+i.mail {
+    width: 34px;
+    background-image: url(../images/mail.svg);
+}
