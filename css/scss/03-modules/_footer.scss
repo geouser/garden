@@ -35,4 +35,8 @@
 .powered {
     font: 18px $dsa;
     width: 300px;
+    color: $grey;
+    a {
+        color: $grey;
+    }
 }

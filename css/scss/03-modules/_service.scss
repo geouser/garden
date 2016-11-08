@@ -1,0 +1,22 @@
+.service {
+    margin-bottom: 80px;
+    &__text {
+        padding: 0 15%;
+        text-align: left;
+        @media (max-width: 1500px) {
+            padding: 0 12%;
+        }
+    }
+    p {
+        margin-bottom: 30px;
+    }
+    .full {
+        width: 100%;
+        margin-top: 90px;
+        display: block;
+    }
+}
+
+.works + .service {
+    margin-top: 80px;
+}
