@@ -93,3 +93,31 @@ i.mail {
     width: 34px;
     background-image: url(../images/mail.svg);
 }
+
+.contact-us--white {
+    background: #FFF;
+    .title {
+        color: #000;
+    }
+    i.phone {
+        width: 36px;
+        background-image: url(../images/call_d.svg);
+    }
+    i.chat {
+        width: 34px;
+        background-image: url(../images/chat_d.svg);
+    }
+    i.mail {
+        width: 34px;
+        background-image: url(../images/mail_d.svg);
+    }
+    .options-box { 
+        div {
+            a {
+                span {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
