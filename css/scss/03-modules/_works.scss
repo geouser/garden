@@ -39,4 +39,13 @@
             opacity: 1;
         }
     }
+    &--5 {
+        .works__example {
+            width: 20%;
+            margin: 0;
+            &:after {
+              padding-bottom: 76%;
+            }
+        }
+    }
 }
