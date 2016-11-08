@@ -1,0 +1,69 @@
+.contacts {
+    @include flex();
+    > div {
+        width: 50%;
+        text-align: left;
+    }
+    .title {
+        color: $green;
+        display: block;
+        margin-bottom: 16px;
+    }
+    address, 
+    a {
+        font: 18px $dsa;
+        color: #000;
+    }
+    &__info {
+        padding-right: 20%;
+        &__item {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.form {
+    .title {
+        margin-bottom: 40px;
+    }
+    label {
+        display: block;
+        margin-bottom: 24px;
+        color: #282826;
+        font: 18px $dsa;
+    }
+    input {
+        height: 60px;
+        margin-bottom: 40px;
+        padding-left: 10px;
+        width: 100%;
+        border: 2px solid #282826;
+        -webkit-border-radius: 6px;
+                border-radius: 6px;
+    }
+    textarea {
+        margin-bottom: 40px;
+        padding: 10px;
+        width: 100%;
+        resize: none;
+        height: 110px;
+        border: 2px solid #282826;
+        -webkit-border-radius: 6px;
+                border-radius: 6px;
+    }
+    .inputGroup {
+        @include flex();
+        div {
+            width: 48%;
+        }
+    }
+    .button {
+        width: 100%;
+        height: 60px;
+    }
+}
+
+.map-canvas {
+    height: 450px;
+    margin-top: 95px;
+}

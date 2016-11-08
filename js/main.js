@@ -150,4 +150,67 @@ jQuery(document).ready(function($) {
         
     });
 
+    
+    /*----------------------------
+                              Google map
+    -------------------------*/
+    var map;
+    function googleMap_initialize() {
+        var lat = $('#map_canvas').data('lat');
+        var long = $('#map_canvas').data('lng');
+
+        var mapCenterCoord = new google.maps.LatLng(lat - 0.002, long);
+        var mapMarkerCoord = new google.maps.LatLng(lat, long);
+
+
+        var mapOptions = {
+            center: mapCenterCoord,
+            zoom: 16,
+            //draggable: false,
+            disableDefaultUI: true,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var styles = [
+            {
+                "featureType": "all",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "saturation": "-20"
+                    },
+                    {
+                        "lightness": "-20"
+                    },
+                    {
+                        "gamma": "1.50"
+                    }
+                ]
+            }
+        ]
+
+        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        map.setOptions({styles: styles});
+        var markerImage = new google.maps.MarkerImage('../images/location.png');
+        var marker = new google.maps.Marker({
+            //icon: markerImage,
+            position: mapMarkerCoord, 
+            map: map,
+            title:"Garden"
+        });
+
+
+      
+        $(window).resize(function (){
+            map.setCenter(mapCenterCoord);
+        });
+    }
+
+    if ( $('#map_canvas').length > 0) {
+        googleMap_initialize();   
+    }
+
 }); // end file
